@@ -263,7 +263,7 @@ SELECT
 FROM runners
 
 -- What was the average time in minutes it took for each runner to arrive at 
--- the Pizza Runner HQ to pickup the order?
+-- the Pizza Runner HQ to pick up the order?
 SELECT 
 	runner_id,
 	AVG(DATEPART(MINUTE, pickup_time - order_time)) AS avg_pickup_time
@@ -273,10 +273,10 @@ ON r.order_id = c.order_id
 WHERE cancellation IS NULL
 GROUP BY runner_id
 
--- What was the average distance travelled for each customer?
+-- What was the average distance traveled for each customer?
 SELECT 
 	customer_id,
-	ROUND(AVG(CAST(distance AS DECIMAL(5,2))),2) AS avg_distance
+	AVG(CAST(distance AS DECIMAL(5,2))) AS avg_distance
 FROM runner_orders r
 JOIN customer_orders c
 ON r.order_id = c.order_id
@@ -358,8 +358,8 @@ ORDER BY COUNT(s.value) DESC
 -- Meat Lovers; Meat Lovers - Exclude Beef; Meat Lovers - Extra Bacon; Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
 
 SELECT 
-	order_id,
-	CONCAT (
+     order_id,
+     CONCAT (
 	(SELECT 
 		pizza_name 
 		FROM pizza_names n
@@ -391,7 +391,7 @@ FROM customer_orders c
 -- Pricing 
 
 -- If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - 
--- how much money has Pizza Runner made so far if there are no delivery fees?
+-- How much money has Pizza Runner made so far if there are no delivery fees?
 SELECT 
 	SUM(sale) AS total_sales
 FROM
@@ -405,8 +405,6 @@ JOIN runner_orders r
 ON c.order_id  =r.order_id
 WHERE cancellation IS NULL
 GROUP BY pizza_id) AS pricing
-
-SELECT * FROM pizza_toppings
 
 -- What if there was an additional $1 charge for any pizza extras?
 -- Add cheese is $1 extra
@@ -424,11 +422,11 @@ FROM customer_orders c
 JOIN runner_orders r
 ON c.order_id  =r.order_id
 WHERE cancellation IS NULL
-GROUP BY pizza_id,extras ) AS pricing
+GROUP BY pizza_id, extras ) AS pricing
 
--- If a Meat Lovers pizza was $12 and Vegetarian $10 fixed prices with no cost for extras and 
--- each runner is paid $0.30 per kilometre traveled.
--- how much money does Pizza Runner have left over after these deliveries?
+-- If a Meat Lovers pizza was $12 and a Vegetarian $10 fixed prices with no cost for extras and 
+-- each runner is paid $0.30 per kilometer traveled.
+-- How much money does Pizza Runner have left over after these deliveries?
 
 SELECT 
 	r.order_id,
