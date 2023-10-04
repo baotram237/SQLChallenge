@@ -77,8 +77,7 @@ ON m.product_id = s1.product_id
 WHERE s1.order_date IN 
         (SELECT MIN(order_date)
      FROM sales s2
-     WHERE s1.customer_id = s2.customer_id
-     GROUP BY customer_id)
+     WHERE s1.customer_id = s2.customer_id)
 GROUP BY s1.customer_id, m.product_name;
 
 -- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
