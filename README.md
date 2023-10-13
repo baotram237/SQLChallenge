@@ -17,7 +17,7 @@ Topics covered:
 - Date and Timestamp manipulation including timezones
 
 # 1. [Danny's Dinner:](https://github.com/baotram237/SQLChallenge/blob/main/CaseStudy1_Danny'sDiner.sql)
-[Challenge description]([url](https://8weeksqlchallenge.com/case-study-1/))
+[Challenge description](https://8weeksqlchallenge.com/case-study-1/)
 - Restaurant management (explore visiting patterns, buying behavior, insights about existing customer loyalty program)
    - Highlight skills:
         - Common table Expressions
@@ -47,7 +47,7 @@ Topics covered:
         - Subquery
         - User-defined functions
         - Window function
-# 5. [Data Mart]([url](https://github.com/baotram237/SQLChallenge/blob/main/CaseStudy5_DataMart.sql)
+# 5. [Data Mart](https://github.com/baotram237/SQLChallenge/blob/main/CaseStudy5_DataMart.sql)
 - [Challenge description](https://8weeksqlchallenge.com/case-study-5/)
 - Sale performance analysis (identify factors that impact changes, minimize impact suggestions)
     - Highlight skills:
@@ -61,7 +61,7 @@ Topics covered:
         - Window function
         - Subquery
         - Create sales reports
-# 7. [Balanced Tree Clothing company:]([url](https://github.com/baotram237/SQLChallenge/blob/main/CaseStudy7_BalancedTreeClothingCo..SQL)
+# 7. [Balanced Tree Clothing company:](https://github.com/baotram237/SQLChallenge/blob/main/CaseStudy7_BalancedTreeClothingCo..SQL)
 - [Challenge description](https://8weeksqlchallenge.com/case-study-7/)
 - Analysis of the merchandising team's performance, financial reports
     - Highlight skills:
