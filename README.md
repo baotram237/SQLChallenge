@@ -2,7 +2,7 @@
 This repository serves as the solution for the 8 case studies from the #8WeekSQLChallenge.
 It showcases my ability to tackle various SQL challenges and demonstrates my proficiency in SQL query writing and problem-solving skills.
 
-The Challenge's Link: [https://8weeksqlchallenge.com/](url)
+The Challenge's Link: [https://8weeksqlchallenge.com/](https://8weeksqlchallenge.com/)
 
 Topics covered:
 - Cleaning data: Identifying and dealing with duplicate, null, and invalid data
@@ -63,7 +63,7 @@ Topics covered:
         - Window function
         - Subquery
         - Create sales reports
-# 7. [Balanced Tree Clothing company:](https://github.com/baotram237/SQLChallenge/blob/main/CaseStudy7_BalancedTreeClothingCo..SQL)
+# 7. [Balanced Tree Clothing company:](https://github.com/baotram237/SQLChallenge/blob/main/CaseStudy7_BalancedTreeClothingCo..sql)
 - [Challenge description](https://8weeksqlchallenge.com/case-study-7/)
 - Analysis of the merchandising team's performance, financial reports
     - Highlight skills:
